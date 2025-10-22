@@ -215,7 +215,8 @@
       <div class="progrr">
         <bnm>Servers <mal onclick=" olab()">?</mal></bnm>
         <div id="yun" style=" width:110px; max-width: 132px; overflow: hidden; display: ; height:18px; ">
-          </div>
+        <div>[<span data-emp="mes" class="">Mes</span>] </div>
+		</div>
         <input id="may" type="text" style="font-weight:800px; font-family:serif; display: flex;  justify-content: left; align-items: center;  width: 34px; height: 34px;margin-top:5px; position: absolute; right:0px; font-family:Aubrey; font-size:10px; background-color:#000; color:mediumpurple; border:1px solid #181818; border-radius:2px; color:#fff; text-shadow: 1px 1px 3px powderblue; font-family: PT Sans Narrow; text-transform: capitalize; left:100px; color:#fff; font-size:11px; letter-spacing: -.5px; text-align: start; padding-left:03px;"><button style=" font-weight:800px; font-family:serif; padding:9px; display: flex;  justify-content: center; align-items: center;  width: 34px; height: 34px;margin-top:5px; position: absolute; right:0px; font-family:Aubrey; font-size:18px; background-color:#000; color:mediumpurple; border:1px solid #181818; border-radius:2px; color:#fff; text-shadow: 1px 1px 3px orange; font-family: PT Sans Narrow;" class="uiv">39</button>
         <textarea name="" id="n8" placeholder="Output" cols="30" rows="10" style=" padding-bottom: 5px; width: 80px; height:40px; background-color: #000; box-shadow:none; border-radius:3px; margin-top:3px; border:1px solid #181818; font-size:6px; outline: grey; padding:4px;"></textarea><textarea placeholder="Input" name="" id="" cols="30" rows="10" style=" width: 82px; height:40px; background-color: #000; box-shadow:none; border-radius:3px; margin-top:3px; border:1px solid #181818; font-size:6px; outline: grey; padding:4px; position: absolute; top:41px; left:90px;"></textarea>
     <botr style=" margin-top:5px; width:180px;">
@@ -1709,7 +1710,7 @@ animation: load 2s linear infinite;
 	  localStorage.setItem('Fuel',Infinity);
 	  localStorage.setItem('km Travelled',Number(2789));
 	  localStorage.setItem('Idle',Number(67232124));
-	  localStorage.setItem('empony','mes') 
+	  // localStorage.setItem('empony','mes') 
 	  localStorage.setItem('gr',Number(270)) 
 	  
 	  
@@ -1802,9 +1803,10 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
  var efds = document.querySelector('jewd');
  if(localStorage.getItem('existed') == 'true'){
    efds.style.display = 'none'
+   localStorage.setItem(`memory${localStorage.getItem('empony')}`,document.querySelector('.hi').innerHTML) 
  }else{
    efds.style.display = 'grid'
-	  localStorage.setItem('sev',`<div>[<span data-emp="mes" class="">Mes</span>] </div>`);
+	 // localStorage.setItem('sev',`</div>`);
 	  // localStorage.setItem('memorymes', document.querySelector('.hi').innerHTML)
 	  
  }
@@ -1847,7 +1849,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
     fer[order].value = ''
   }
   
-  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true'){ return }
+  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true'){ return } if(localStorage.getItem('empony') != ""){
                                 memio.innerHTML = localStorage.getItem(`memory${iinsaan}`); 
                                 romeo.innerHTML = localStorage.getItem(`memory${firh}`); 
                                                                 var ect = document.querySelectorAll('.img');
@@ -1879,6 +1881,7 @@ marbel.forEach((v, z) => {
   },60); 
   redo();
   }
+	  }
   function eve1(hawwa){   
     //memio.dataset.style = `grid-template-rows: repeat(${yetq.length},330px); grid-template-columns: 1; `,
    // memio.setAttribute('style', memio.dataset.style);
