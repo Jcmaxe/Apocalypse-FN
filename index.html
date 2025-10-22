@@ -1874,8 +1874,8 @@ marbel.forEach((v, z) => {
   /* Stream Over All Obstacles*/
   setTimeout(function(){ 
     var yetq = memio.querySelectorAll('.img'); 
-    var yetk = romeo.querySelectorAll('.image--feed .vert'); 
-    memio.dataset.style = `grid-template-rows: repeat(${yetq.length},330px); grid-template-columns: 1; `,
+    var yetk = romeo.querySelectorAll('.image--feed .vert'); // 330
+    memio.dataset.style = `grid-template-rows: repeat(${yetq.length},600px); grid-template-columns: 1; `,
     memio.setAttribute('style', memio.dataset.style);
     romeo.dataset.style = `grid-template-rows: repeat(${yetk.length},600px); grid-template-columns: 1; `,
     romeo.setAttribute('style', romeo.dataset.style);
@@ -6903,7 +6903,7 @@ margin-right:5px;
       height: 100vh;
       padding-left: 21px;
       overflow-y:scroll;
-      grid-template-rows: repeat(2,330px); /*330*/
+      grid-template-rows: repeat(2,600px); /*330*/
       transition: background-color 0.99s ease;
       background-color: #000;
       scroll-snap-stop:always;
@@ -8168,6 +8168,7 @@ text-decoration: underline;
    .img {
       width: 89.25vw; /*89.25vh*/
       height: 315px;
+	  height: 435px; /**/
       background-color: #fff;
       background-color: #d23fe1;
       background-color: transparent;
