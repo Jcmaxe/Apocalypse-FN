@@ -1710,7 +1710,7 @@ animation: load 2s linear infinite;
 	  localStorage.setItem('Fuel',Infinity);
 	  localStorage.setItem('km Travelled',Number(2789));
 	  localStorage.setItem('Idle',Number(67232124));
-	  // localStorage.setItem('empony','mes') 
+	  localStorage.setItem('empony','mes') 
 	  localStorage.setItem('gr',Number(270)) 
 	  // localStorage.setItem('sev', document.querySelector('#yun').innerHTML);
 	  
@@ -1799,7 +1799,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
     b : 25,
     h : 25
  }
- var az = 9.76;
+ var az = 9.76; 
  var defics = document.querySelector('jewd button');
  var efds = document.querySelector('jewd');
  if(localStorage.getItem('existed') == 'true'){
@@ -1807,8 +1807,8 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
    // localStorage.setItem(`memory${localStorage.getItem('empony')}`,document.querySelector('.hi').innerHTML) 
  }else{
    efds.style.display = 'grid'
-	 
-	  // localStorage.setItem('memorymes', document.querySelector('.hi').innerHTML)
+	  localStorage.setItem('sev',`<div>[<span data-emp="mes" class="">Mes</span>] </div>`);
+	  localStorage.setItem('memorymes', document.querySelector('.hi').innerHTML)
 	  
  }
  defics.addEventListener('click',(e) => {
@@ -1824,7 +1824,12 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
   var fer = document.querySelectorAll('.progrr textarea');
   var lpf = document.querySelector('.progrr #yun'); 
   retty()
-  function retty(){lpf.innerHTML = localStorage.getItem('sev') }
+  function retty(){ if(localStorage.getItem('sev') != ""){
+	      lpf.innerHTML = localStorage.getItem('sev') 
+	    }else{ 
+	      localStorage.setItem('sev',`<div>[<span data-emp="mes" class="">Mes</span>] </div>`);
+	    }
+  }
   function filtup(){
     if(fer[1].value == ''){ return }else{
       memio.innerHTML = fer[1].value }
@@ -1850,7 +1855,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
     fer[order].value = ''
   }
   
-  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true'){ return } if(localStorage.getItem('existed') == 'true'){
+  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true'){ return } if(localStorage.getItem('gan') == 'true'){
                                 memio.innerHTML = localStorage.getItem(`memory${iinsaan}`); 
                                 romeo.innerHTML = localStorage.getItem(`memory${firh}`); 
                                                                 var ect = document.querySelectorAll('.img');
