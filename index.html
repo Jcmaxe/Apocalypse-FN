@@ -1710,7 +1710,7 @@ animation: load 2s linear infinite;
 	  localStorage.setItem('Fuel',Infinity);
 	  localStorage.setItem('km Travelled',Number(2789));
 	  localStorage.setItem('Idle',Number(67232124));
-	  localStorage.setItem('empony','mes') 
+	  // localStorage.setItem('empony','mes') 
 	  localStorage.setItem('gr',Number(270)) 
 	  // localStorage.setItem('sev', document.querySelector('#yun').innerHTML);
 	  
@@ -1804,7 +1804,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
  var efds = document.querySelector('jewd');
  if(localStorage.getItem('existed') == 'true'){
    efds.style.display = 'none'
-   localStorage.setItem(`memory${localStorage.getItem('empony')}`,document.querySelector('.hi').innerHTML) 
+   // localStorage.setItem(`memory${localStorage.getItem('empony')}`,document.querySelector('.hi').innerHTML) 
  }else{
    efds.style.display = 'grid'
 	 
@@ -1850,7 +1850,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
     fer[order].value = ''
   }
   
-  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true'){ return } if(localStorage.getItem('empony') != ""){
+  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true'){ return } if(localStorage.getItem('existed') == 'true'){
                                 memio.innerHTML = localStorage.getItem(`memory${iinsaan}`); 
                                 romeo.innerHTML = localStorage.getItem(`memory${firh}`); 
                                                                 var ect = document.querySelectorAll('.img');
@@ -9121,7 +9121,7 @@ bulb{
   position: absolute; 
   font-size: 26px;
 }
-.gvh{
+.hi .img .gvh{
   height: 220px;  // 220
   transition: .7s all ease;
 }
