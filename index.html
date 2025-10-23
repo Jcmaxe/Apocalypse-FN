@@ -2376,7 +2376,19 @@ speads[4].addEventListener('keyup', speadit)
   }
   var exd = 9
   var rmw = document.querySelector('#remi') 
-  rmw.textContent = 'null'
+  rmw.textContent = 'null'  
+	  function crli(){
+var en1 = document.querySelectorAll('.hi .cu img'); 
+var en2 = document.querySelectorAll('.hi .tu img'); 
+const lig = 'G/Screenshot_20240411-085120_Google.jpg'
+
+en1.forEach((well,tri)=>{
+  en1[tri].src = lig  // Like
+  en2[tri].src = lig  // Dislike
+     // About the codes, Its to change it currently
+  })
+}
+	  crli();
   function intercast(adementHi){ exd ++, rmw.textContent = exd  // eve1(); 
     var mmb = {
   x1: speads[0].value,
