@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+</head>
+
+<body>
+    <div class="cheat" style=" width:100vw; height:100vh; background-color:metal;">
+                 <div class="codeeditor">
+            <l><div class="c" style=" background-color:orangered;" onclick="adjust()"></div><div class="c" style=" background-color:#eccc68;" onclick="inc()"></div><div class="c" id="selec" style=" background-color:steelblue;"><input type="color" name="" id="colorSelector" hidden></div><div class="c" style=" background-color:#9966cc;" onclick="retrive();">R</div></l><button id="mint" onclick="hide()">save</button><div class="btn"><button id="hb" onclick="layout()">HTML</button><button id="cb" onclick="sty()">CSS</button><button id="jb" onclick="javascript()">JS</button><button id="iut" style="border:none;" onclick="outp()">🆬</button></div>
+            <div class="fine"></div>
+		<section >
+		<textarea id="html-area" style=" width:310px; height:490px;"> </textarea>		
+	</section>
+	<section>
+		<textarea id="css-area" style=" width:310px; height:490px;"> </textarea>
+	</section>
+
+	<section >
+	    <textarea id="script-area" style=" width:310px; height:490px;"> </textarea>	
+	</section>
+</div>
+<div class="outputeditor">	
+	<iframe id="output-frame" width="330px" height="510px" style=" position: relative; bottom:300px;"></iframe>
+	</div>
+	 
+	<footer>
+	  <button onclick="display('<div></div>')">div</button>  <button onclick="display('<span></span>')">span</button> <button onclick="display(`<img src='' alt=''/>`)">img</button> <button onclick="display(`<video controls muted loop autoplay src=''></video>`)">video</button><button onclick="display(`localStorage.getItem('Idle',);`)">Loc</button> <button>More</button><button>More</button><button>More</button><button>More</button><button>More</button><button>More</button><button>More</button><button>More</button><button>More</button><button>More</button>
+	</footer>
+     </div>
+</body>
+
+</html>
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Labrada:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
+   *{
+      margin: 0;
+      padding: 0;
+      font-family: "VT323", monospace;
+   }
+   body{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /*background-color: #5A5C69;*/
+      background-color: #181818;
+   }
+     .c{
+     width:10px;
+     height:10px;
+     border-radius:50%;
+     background-color:#fff;
+     margin-left:5px;
+     font-size: .5px;
+     color:transparent;
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+  }
+  .c:hover{
+     box-shadow: 0px 1.5px 5px #fff;
+  }
+  
+  .codeeditor{
+     width:330px;
+     height:550px;
+     background-color:#000;
+     border-radius: 3px;
+     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+     position: fixed;
+     top:30px;
+     left:20px;
+     z-index: 4;
+     font-family: monospace;
+     font-size:12px;
+     position: ;
+     resize: 100px;
+     
+  }
+  .codeeditor .fine{
+     position: absolute;
+     width:100%;
+     height:3px;
+     left:0px;
+     top:40px;
+     background-color:#181818;
+  }
+  .codeeditor l{
+     position: absolute;
+     left:10px;
+     top:15px;
+     color:whitesmoke;
+     float: right;
+     display: flex;
+  }
+  footer{
+    width: 100vw;
+    height: 40px;
+    position: absolute; 
+    bottom:0px;
+    background-color: #000;
+    border-top: 2px double #212121;
+    border-bottom: 2px double #212121;
+    display:grid;
+    grid-template-rows: 1;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-template-columns: repeat(15, 1fr);
+    z-index: 100;
+  }
+  footer button{
+    width: 125px;
+    height: 100%;
+    border: none;
+    background-color: #181818;
+    color: grey;
+    border-left: 2px solid #212121;
+  }
+  
+  .codeeditor #mint{
+     position: absolute;
+     left:90px;
+     top:10px;
+     width:65px;
+     height:20px;
+     border:1px solid lightgrey;
+     border-radius:7px;
+     font-size:9px;
+     color:white;
+     z-index: 12;
+     background-color:#000;
+  }
+  .codeeditor textarea{
+     width:330px;
+     height:510px;
+     color:#212121;
+     font-size:14px;
+     font-family: ;
+     padding: 10px;
+     border-radius:0px;
+     position: absolute;
+     top:0px;
+     border:none;
+     background-color:;
+     box-shadow: none;
+     left:0;
+     text-overflow: clip;
+     outline:none;
+     border-radius: 0 0 3px 3px;
+  }
+  .codeeditor .btn{
+     position: relative;
+     left:83px;
+     bottom:0px;
+     z-index: ;
+  }
+  .btn button{
+     border-color:transparent;
+     width:40px;
+     height:40px;
+     color:grey;
+     background-color:#000;
+  }
+  .codeeditor #preview{
+     position: absolute;
+     width:20px;
+     height:20px;
+     font-size:12px;
+     font-family: fantasy;
+     top:10px;
+     right:10px;
+  }
+  .btn button:hover{
+     border-bottom:2px solid #64aeeb;
+     color:#000;
+  }
+  .codeeditor #preview{
+     transform: rotate(90deg);
+     border:none;
+  }
+  .codeeditor #html-area,#css-area,#script-area{
+     width:330px;
+     height:510px;
+     font-size:14px;
+     font-family:;
+     padding: ;
+     resize: vertical;
+     border-radius:0px;
+     position: absolute;
+     top:42px;
+     background-color:;
+     box-shadow: none;
+     display: ;
+     left:0;
+     overflow: scroll;
+   z-index:5;
+     outline:none;
+     border-radius: 0 0 3px 3px;
+     overflow: hidden;
+     transition: height 0.5s ease;
+  }
+  #html-area{
+     background-color:#000;
+     color:lightgrey;
+     border-bottom:2px inset grey;
+     width:100%;
+     height:510px;
+     position: absolute;
+     left:0px;
+     top:42px;
+     display: none;
+  }
+  aside{
+  }
+  #css-area{
+     background-color:#000;
+     color:lightgrey;
+     display:none;
+     border-bottom:2px double grey;
+  }
+  #script-area{
+     background-color:#000;
+     display: none;
+     color:tan;
+     border-bottom:2px dashed grey;
+     border-radius:0 0 3px 3px;
+  }
+  iframe{
+     width:330px;
+     height:510px;
+     background-color:#fff;
+     border:none;
+     border-bottom:2px solid #eccc68;
+     border-radius:0 0 3px 3px;
+     position: relative;
+     display: none;
+     top:73px;
+     left:20px;
+     z-index: 6;
+     transition: display 0.7s ease;
+     animation: opac 0.4s ease;
+  }
+  @keyframes opac{
+     0%{
+        opacity:0;
+     }
+     100%{
+        opacity: 1;
+     }
+  }
+  .outputeditor{
+  }
+  .btn-t button {
+     color: grey;
+     background-color: #42445A;
+     border: none;
+     padding: 5px;
+  }
+  #hb{
+     position: absolute;
+     left:80px;
+     top:0px;
+     width:40px;
+     height:40px;
+     border-radius:0px;
+     font-size:10px;
+     color:grey;
+     z-index: ;
+     background-color:#000;
+  }
+  #cb{
+     position: absolute;
+     left:120px;
+     top:0px;
+     width:40px;
+     height:40px;
+     font-size:10px;
+     color:grey;
+     z-index: ;
+     background-color:#000;
+  }
+  #jb{
+     position: absolute;
+     left:160px;
+     top:0px;
+     width:40px;
+     height:40px;
+     font-size:10px;
+     color:grey;
+     z-index: ;
+     background-color:#000;
+  }
+  #iut{
+     position: absolute;
+     left:200px;
+     top:0px;
+     width:40px;
+     height:40px;
+     font-size:10px;
+     color:grey;
+     z-index: 1;
+     background-color:#000;
+  }
+  #btn{
+     background-color: ;
+  }
+</style> 
+<script>
+      var cheat = document.querySelector('.cheat');
+      var hb = document.querySelector('#hb');
+    var cb = document.querySelector('#cb');
+    var jb = document.querySelector('#jb');
+    var iut = document.querySelector('#iut'); iut.textContent = `⎌`; 
+    var htmlContent = document.querySelector('#html-area');
+    var cssContent = document.querySelector('#css-area');
+    var scriptContent = document.querySelector('#script-area');
+    var outputElement = document.querySelector('iframe');
+    var html = true;
+    var css = false;
+    var script = false;
+    var outmode = false;
+     var index_html = localStorage;
+   var style_css = localStorage;
+   var main_js = localStorage;
+   htmlContent.addEventListener('keyup',hide);
+   cssContent.addEventListener('keyup',hide);
+   scriptContent.addEventListener('keyup',hide);
+    function run(){
+			try{
+			var htmlCode = document.querySelector(".codeeditor #html-area").value;
+			var cssCode = `<style>${document.querySelector(".codeeditor #css-area").value}</style>`;
+			var scriptCode= document.querySelector(".codeeditor #script-area").value;
+			var output = document.querySelector(".outputeditor #output-frame");
+			output.contentDocument.body.innerHTML = htmlCode + cssCode;
+			output.contentWindow.eval(scriptCode);
+       }catch(err){
+          console.warn('error');
+      }
+   }
+   function layout(){
+    	html = true,css = false,script = false,outmode = false;
+    }
+    function sty(){
+    	html = false;css = true;script = false;outmode = false;
+    }
+    function javascript(){
+    	html = false;css = false;script = true;outmode = false;
+    }
+        
+    function outp(){
+       run();outmode = true;html = false;css = false;script = false;
+    }
+    function checkSelected(){
+       if(html === true){
+         htmlContent.style.display = 'flex';
+         cssContent.style.display = 'none';
+         scriptContent.style.display = 'none';
+         outputElement.style.display = 'none';
+      }
+      if(css === true){
+         outputElement.style.display = 'none';
+         htmlContent.style.display = 'none';
+         cssContent.style.display = 'flex';
+         scriptContent.style.display = 'none';         
+      }
+      if(script === true){
+         outputElement.style.display = 'none';
+         htmlContent.style.display = 'none';
+         cssContent.style.display = 'none';
+         scriptContent.style.display = 'flex';
+      }
+      if(outmode === true){
+         outputElement.style.display = 'flex';
+         htmlContent.style.display = 'none';
+         cssContent.style.display = 'none';
+         scriptContent.style.display = 'none';
+      }
+      
+    }
+    setInterval(()=>{
+    checkSelected();
+    },0);
+       
+       /*document.querySelector(".codeeditor #html-area").addEventListener("keyup",hide;
+	 document.querySelector(".codeeditor #css-area").addEventListener("keyup",hide;
+	 document.querySelector(".codeeditor #script-area").addEventListener("keyup",hide;*/
+      function hide(){
+    	  index_html.setItem('HTML',htmlContent.value);
+    	  style_css.setItem('CSS',cssContent.value);
+    	  main_js.setItem('JS',scriptContent.value);
+      }
+      function retrive(){
+    	htmlContent.value = index_html.getItem('HTML',htmlContent.value);
+    	cssContent.value = style_css.getItem('CSS',cssContent.value);
+    	scriptContent.value = main_js.getItem('JS',scriptContent.value);
+      }
+    	var eee = document.querySelector('.codeeditor');
+    	var v = [htmlContent,
+    	         cssContent,
+    	         scriptContent]
+      var adLimit = null;
+      var incLimit = null;
+      function adjust(){
+         adLimit++;
+    	eee.style.transition = 'top 1000ms ease';
+    	if(adLimit === 1){
+    	   eee.style.top = '60px';
+    	}
+    	if(adLimit === 2){
+    	   eee.style.top = '40px';
+    	}
+    	if(adLimit === 3){
+    	   eee.style.top = '100px';
+    	   eee.style.zIndex = '4';
+    	   adLimit = null;
+    	}
+    }
+    function inc(){
+    incLimit++;
+    for(i=0;i<v.length;i+=1){
+       v[i].style.transition = 'height 1s ease';
+    }
+    	if(incLimit === 1){
+    	   for(i=0;i<v.length;i++){
+    	      v[i].style.height = '610px';
+         }
+    	}
+    	if(incLimit === 2){
+    	   for(i=0;i<v.length;i++){
+    	      v[i].style.height = '710px'
+    	   }
+    	}
+    	if(incLimit === 3){
+        for(i=0;i<v.length;i++){
+           v[i].style.height = '810px';
+        }
+    	}
+    	if(incLimit === 4){
+    	   for(i=0;i<v.length;i++){
+    	      v[i].style.height = '510px';
+    	   }
+    	   incLimit = null;
+    	}
+    }
+    var selec = document.querySelector('#selec');
+    var colorSelector = document.querySelector('#colorSelector');
+    selec.addEventListener('click',function(){
+       colorSelector.click();
+    })
+    colorSelector.addEventListener('change',function(){
+       selec.style.backgroundColor = colorSelector.value;
+       if(html === true){
+          htmlContent.value += colorSelector.value;
+       }
+       if(css === true){
+          cssContent.value += colorSelector.value;
+       }
+       if(script === true){
+          scriptContent.value += colorSelector.value;
+       }
+    })
+    function getPackages(){
+    	var f_objects = {
+    	   htmlContent : index_html,
+    	   cssContent : style_css,
+    	   scriptContent : main_js
+    	}
+    	   //main = ()
+    	   function varsons(){
+    	     var efhash = localStorage;
+    	     efhash.setItem('main',getPackages)
+         }
+    	
+    	setTimeout(()=>{
+    	   varsons();
+    	   console.log('vf%hash/packages/varsons',getPackages);
+    	},1200);
+    }
+    function display(char){
+      htmlContent.value += char;
+    }
+</script>
