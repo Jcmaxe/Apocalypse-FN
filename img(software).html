@@ -1,0 +1,385 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>UX</title>
+</head>
+
+<body>
+  <smd id="ioo9" style=" width: 14px; height: 14px; background:#fff; position: absolute; left:13px; top:10px; font-size: 1px; display: flex; justify-content: center; align-items: center; border-radius: 2px; border: 1px solid grey; color: white;">✔</smd> <smd id="ioo9" style=" width: 14px; height: 14px; background:#fff; position: absolute; left:33px; top:10px; font-size: 1px; display: flex; justify-content: center; align-items: center; border-radius: 2px; border: 1px solid grey; color: slateblue;">⏏</smd>
+            <div class="progressS" style="width: 250px; height:87px; background-color:#303030; position: absolute; top:70px; left:67.5px; display: none;">
+            <num style=" position: absolute; font-size:17px; top:30px; left:30px; color: #e5e5e5;">0%</num>
+            <div class="outer" style=" position: relative; top:25px; left:100px; width:120px; height:30px; border: 1px solid #181818; background-color:grey; box-shadow:inset 0px 0px 9px #303030; border-radius:px;">
+              <div class="inner" style=" translate:width 1s linear; position: absolute; width:0px; height:100%; background: linear-gradient(to right,red,orange,yellow,lime,green,turquoise,blue,purple,orchid); top:0px; left:0px; border-radius:0px; box-shadow:inset 0px 0xp 3px red; overflow-x: hidden; color: transparent;">Spectra</div>
+            </div>
+            <span style=" font-size: 8px; color: grey; line-height: 20px;">(322 frames) </span>
+            </div>
+  <fvec style=" font-family: Mukta,sans-serif; letter-spacing: -1.4px; background-color:#000; width:250px; height:268px; position: absolute; z-index: 78; transition: all .4s ease; display: flex; justify-content: center; align-items: center; font-size:30px; color:#e5e5e5; margin-bottom:44px;">Apocalypse <span style=" color: lavender; margin-left: 10px "> 4</span>  </fvec>
+  <img src="/Screenshot_20251022_013013_Spck Editor(1).jpg" width="250" alt="" style="z-index: 3; position: relative; transition: all .4s ease;">
+  <flec style=" z-index: 3;"><input type="text" placeholder="Source (img)"><input type="number" placeholder="Index"><input placeholder="Id" type="text" style=" color: orchid; width:38px;"><button style=" width:38px;" hidden></button></flec>
+  <flec style=" z-index: 3; padding-left: -1px;"><button style=" padding:0px 5px; color: azure;">Split</button><button style=" padding:0px 5px; color: #eccc68;">Slideshow</button><button style=" padding:0px 5px; color: bisque;">Copy</button><button style=" padding:0px 5px; color: lightseagreen;" class="il">Match</button><button style=" padding:0px 5px;">Delete</button><button style=" padding:0px 5px; color: violet;">Return</button></flec>
+  <pls style=" position: absolute; bottom:10px; right:20px; color: grey; font-size: 7px;">MADE BY JCM ®️</pls>
+  <cdkey>
+    <div class="cent">
+      <img src="" alt="" width="100">
+    </div>
+  </cdkey>
+<p style=" position: absolute; color: #ffffff21; font-size:10px; font-style: italic; font-weight: 200; font-family:sans-serif; bottom: 10px; left:10px;">Source : (@HongKongDollCN : "X") </p>
+</body>
+
+</html> 
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Archivo+Black&family=Diphylleia&family=DotGothic16&family=Inconsolata&family=JetBrains+Mono&family=Mukta&display=swap');
+   :root{
+   --bc: #e5e5e5;
+   --c1: #2f3542;
+   --c2: #212121;
+   --c3: #64aeeb;
+   --c4: #42445A;
+   --c5: #3D3C42;
+   }
+   *{
+      margin: 0;
+      padding: 0;
+      font-family: "Mukta",sans-serif;
+      box-sizing: border-box;
+   }
+   body{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--c5);
+      user-select: none;
+   }
+   smd:hover{ background-color: #1B8AFF;}
+   flec{
+     width: 250px;
+     height: 22px;
+     display: flex; 
+     background-color: #000;
+   }
+   flec button{
+     width: 41.66667px;
+     background-color: #000;
+     color: lightgrey;
+     border: none;
+     font-size: 8px;
+   }
+   flec button:active{
+     box-shadow: 2px 2px 6px azure;
+     text-shadow: .3px .3px 1px red;
+   }
+   flec input{
+     width: 171px;
+     background-color: #000;
+     color: orange;
+     border: none;
+     outline: none;
+     padding-left: 5px;
+     font-size: 10px;
+     font-family: "sans-serif";
+     font-style: italic;
+     font-weight: 300;
+   }
+   flec input:nth-child(1){
+     color: red;
+     font-size: 10px;
+     font-family: "sans-serif";
+     font-style: italic;
+     font-weight: 300;
+   }
+   flec input:nth-child(2){
+     width: 40px;
+     background-color: #181818;
+     text-align: center; 
+   }
+   flec button:active{
+     color: orange;
+   }
+   cdkey{
+     width: 120px;
+     height: 120px;
+     background-color: #000;
+     position: absolute;
+     z-index: 0;
+     bottom: 260px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-bottom: 3px dashed #303030;
+     transition: .6s all ease;
+     opacity: 0;
+   }
+   cdkey .cent{
+     width: 100px;
+     height: 100px;
+     background: #2A2A2A;
+     border-radius: 50%;
+     animation: ideme 1s linear infinite;
+   }
+   .cent img:hover{
+     opacity: 0;
+   }
+   @keyframes ideme{
+     0%{
+       transform: rotate(0deg);
+     }
+     100%{
+       transform: rotate(360deg);
+     }
+   }
+</style> 
+ <script>
+ var ceases;
+ var data_base = [];
+ var datalength = null
+ var realSrc = null
+ var splitSrc = null
+ var encSrc = null
+ var slideshow = false
+ var slideEngine = null
+ var nofs = null
+ var timimg = Number(localStorage.getItem('(length)'));
+ const ctime = timimg
+ var pe1 = document.querySelectorAll('smd');
+ var x = null // 341
+ var y = null // 444
+ var z = null // 333
+ let l = null // 777
+ var angelNumber = [x,y,z]
+ // Angels visited count
+ let q = 0; let r = 0; let s = 0; let g = 0;
+ // Ordered Angels 
+ let c = []
+ const f = 0
+ var menu = ["settings","open","exit"]
+ var main = {
+   cin : document.querySelectorAll('input'),
+   img : document.querySelector('img'),
+   btn : document.querySelectorAll('button'),
+   pbm : document.querySelector('.inner'),
+   pnm : document.querySelector('num'),
+   fvc : document.querySelector('fvec'),
+   vgl : document.querySelector('.progressS'),
+   path : ['jeny.json','sty.json','all.json','m.json',localStorage.getItem('data-path'),'esec.database.json']
+ }
+ // add Event listener to the window
+ window.addEventListener('DOMContentLoaded',feedIt);
+ // Fetching Images from Database
+ fetch(`${main.path[f]}`).then(response => response.json()).then(data => stries(data))
+ async function stries(f) { datalength = Number(f.img.length); localStorage.setItem('(length)',Number(f.img.length)); for(var t=0 ; t < datalength ; t ++){ try{data_base.push(f.img[t].x); localStorage.setItem('ask',data_base);}catch(err){ localStorage.setItem('Error',err) } } }
+ main.cin[1].addEventListener('keyup',(e)=>{
+   try{ realSrc = data_base[main.cin[1].value]}catch(err){ localStorage.setItem('Error',err) }
+   try{ main.img.src = data_base[main.cin[1].value],shutter(main.fvc,document.querySelector('img').clientHeight)}catch(err){ localStorage.setItem('Error',err) }
+ })
+ // Code for COPY button
+ main.btn[3].addEventListener('click',async(e) => {
+   await navigator.clipboard.writeText(main.cin[0].value)
+ })
+ // Source Matching Algorithm
+ main.btn[4].addEventListener('click',(e) => {
+   setSource(main.cin[0].value);
+   console.log()
+ })
+ // Function for spliting source
+ main.btn[1].addEventListener('click',function(){
+   main.cin[0].placeholder = called(realSrc)
+ })
+ function called(splitting){ if(splitting == null || splitting == ''){ return }
+   var e = {
+     a : splitting.substr(0,3),
+     b : splitting.substr(3,6),
+     c : splitting.substr(6,realSrc.length)
+   }
+   splitSrc = `"${e.a}" + "${e.b}" + "${e.c}"`;
+   return splitSrc
+ }
+ // Set Source by given Data id called (index)
+   function setSource(ok){
+     var nrc = '/20240809_195239.jpg'
+     var tun = '/20240908_161238.jpg';
+     var src = ok
+     realSrc = ok
+     if(src.includes('jpg') || src.includes('png') || src.includes('gif') || src.includes('jpeg') ){
+       main.img.src = src
+       brakepa('release')
+       setTimeout(function(){shutter(main.fvc,document.querySelector('img').clientHeight)},100);
+     }else{
+       if(ok == ''){
+       main.img.src = tun
+       brakepa('brake')
+       }else if(ok != ''){
+        main.img.src = nrc
+        brakepa('brake')
+       }
+     }
+   }
+   // Deleting the charecters in main input
+   main.btn[5].addEventListener('click',function(){
+     main.cin[0].value = main.cin[0].value.slice(0,-1);
+     main.cin[0].placeholder = main.cin[0].placeholder.slice(0,-1);
+   })
+   main.btn[5].addEventListener('dblclick',(e)=>{
+     main.cin[0].value = ''
+     main.cin[0].placeholder = ''
+   })
+   // Setting src with its id (index)
+   main.cin[2].addEventListener('keypress',(e)=>{
+     exportFile(realSrc,main.cin[2].value);
+   })
+   function exportFile(src,id){
+     try{ localStorage.setItem(`(u_src {${id}})`,src) }catch(err){ localStorage.setItem('Error',err)  }
+     encSrc = src+'⒥'+src;
+     console.warn(encSrc); 
+     console.log(encSrc.replace('⒥',''));
+   }
+   // Slide show function
+   // Functions.  Shutter Speed , FrameInterval
+   var bm = [800,4258];
+   let junctions = [bm[0],bm[1]], iJ = junctions // "1000","3000" ( Default )
+   const tsm = Number(localStorage.getItem('(length)'));
+   main.btn[2].addEventListener('click',slide)
+   function slide(){ setTimeout(()=>{main.vgl.style.display = 'flex'})
+     main.cin[0].value = "Making Slides"
+     if(iJ[1] / 1000 * timimg / 60 < 1){
+       main.cin[0].value = `Estimated (${Math.floor(iJ[1] / 1000 * timimg % 60)} sec)`;
+     }else if(iJ[1] / 1000 * timimg / 3600 < 1){
+       main.cin[0].value = `Estimated (${Math.floor(iJ[1] / 1000 * timimg / 60)} min)`;
+     }else if(iJ[1] / 1000 * timimg / 3600 >= 1 && iJ[1] / 1000 * timimg / 3600 < 25){
+       main.cin[0].value = `Estimated (${Math.floor(iJ[1] / 1000 * timimg / 3600)} hour)`;
+     }else{
+       main.cin[0].value = `Estimated (${Math.floor(iJ[1] / 1000 * timimg / 86400)} day)`;
+     }
+
+
+     if(slideshow == false){ slideshow = true }else if(slideshow == true){ slideshow = false }
+     if(slideshow == true){
+     slideEngine = setInterval(function(){ if(nofs + 1 > datalength){ clearInterval(slideEngine)}
+       nofs ++; timimg --;
+       setSource(data_base[nofs]);
+       main.btn[2].textContent = `Slide(${nofs})`;
+       main.btn[2].style.color = 'orange';
+       main.cin[0].style.color = 'orange';
+     timeMNGMmechanism = setInterval(function(){
+                main.cin[0].value = `(${Math.floor(iJ[1] / 1000 * timimg / 60)} min, "®️")`;
+                if(iJ[1] / 1000 * timimg / 60 < 1){
+                  main.cin[0].value = `(${Math.floor(iJ[1] / 1000 * timimg % 60)+1} sec, "®️")`;
+                }else if(iJ[1] / 1000 * timimg / 60 > 59){
+                  main.cin[0].value = `(${Math.floor(iJ[1] / 1000 * timimg / 3600)} hr, "®️")`;
+                }
+                degrevate(nofs)
+       },iJ[0]); 
+     },iJ[1])
+   }else{
+     clearInterval(slideEngine);
+   }
+   }
+   function degrevate(nofs){
+     if(nofs / tsm * 100 > 99){ return }else{
+     main.pbm.style.width = `${ nofs / tsm * 100}%`;
+     main.pnm.textContent = `${ Math.floor(nofs / tsm * 100)}%`
+   }
+  }
+   // Gesture Help end Function
+   main.cin.forEach((pe,ii)=>{
+     pe.addEventListener('keyup',(e)=>{ pe.placeholder = '' })
+   })
+   function clearplaces(){
+     main.cin.forEach((ab)=>{
+       ab.placeholder = ''
+     })
+   }
+   // Feedback Function () =>
+   main.btn.forEach((e,i) => {
+     e.addEventListener('click',feedIt)
+   })
+   function feedIt(again){
+     //console.clear(again);
+     var margument = { 'Database': data_base, 'Database-length': data_base.length, 'Original-src': realSrc, 'Splited-src': splitSrc, 'Encrypted-src': encSrc }
+     console.groupCollapsed(`(${typeof(margument)})`); 
+     console.warn(margument); 
+     console.warn(`Menu [${menu}]`); 
+   }
+   // Shutter style for the interval between two images rendering
+   function shutter(control,h){  
+     // Testing
+          control.style.height = `${h}px`; c.push(h); localStorage.setItem('Ora',c); 
+          //console.warn(`Image height ${h}px`); 
+          control.textContent = `${h}px`
+          checkCeases(`${h}px`,control.style.height);
+          if(h == 341){ q ++; x = q;}else if(h == 444){ r ++; y = r;}else if(h == 333){ s ++; z = s;}else if(h == 777){ g ++; l = g;}
+          localStorage.setItem('angels',`angels [${q},${r},${s}]`)
+     setTimeout(function(){
+       control.style.height = `0px`
+       control.textContent = ``
+     },900); 
+   }
+   setTimeout(function(){
+     shutter(main.fvc, document.querySelector('img').clientHeight);
+   },1600); 
+   // Shuttee Stopper function
+   function brakepa(shuut){
+     if(shuut == 'brake'){
+     main.fvc.style.display = 'none';
+     }else if(shuut == 'release'){ main.fvc.style.display = 'flex' }
+     else{ return shuut }
+   }
+   // Returning function (data,src,px,h)
+   function unbirth(){
+     var recursion = 0;
+     var looping = null;
+     main.btn[6].style.color = 'orange';
+     clearInterval(slideEngine);
+    looping = setInterval(function(){
+       if(recursion > 98){ clearInterval(looping) }
+       recursion ++;
+       main.btn[6].textContent = `${recursion}%`;
+     },25); 
+     setTimeout(function(){main.img.src = ''},800); 
+     setTimeout(function(){main.cin[0].value = ''},1600); 
+     setTimeout(function(){main.cin[1].value = ''},2400); 
+     setTimeout(function(){main.cin[2].value = ''},3200); 
+     setTimeout(function(){main.btn[6].textContent = 'return',main.btn[6].style.color = 'violet',clearplaces()},4000); 
+   }
+   main.btn[6].addEventListener('click',unbirth)
+   // 320 * 3 
+   // Experimental functions 
+   function speed(value){ bm[1] = value }
+   function shutterSpeed(value){ bm[0] = value }
+   function pathSeries(value){ f = value }
+   function getFr(){ document.querySelector('span').textContent = `(${timimg} / ${ctime} frames)`
+     if(data_base[0] !== ''){
+       pe1[0].style.backgroundColor = 'red';
+       setTimeout(()=>{
+         pe1[0].style.backgroundColor = '#1B8AFF';
+       },1000)
+     }else{
+       return
+     }
+   }
+   setInterval(getFr,1000);
+   function checkCeases(i,s){
+     if(i !== s){
+       ceases ++;
+       console.warn(ceases)
+     }else{
+       return
+     }
+   }
+   var circ = 0;
+   pe1[1].addEventListener('click',(e)=>{ circ ++;
+     if(circ == 1){
+       document.querySelector('cdkey').style.opacity = '1';
+       document.querySelector('cdkey').style.bottom = '140px';
+     }else if(circ == 2){
+       document.querySelector('cdkey').style.bottom = '260px';
+       setTimeout(()=>{document.querySelector('cdkey').style.opacity = '0';},607)
+       circ = 0;
+     }
+   })
+ </script> 
