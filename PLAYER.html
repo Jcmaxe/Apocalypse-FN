@@ -1,0 +1,423 @@
+ <!DOCTYPE html>
+<html desktop="true">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>UX</title>
+</head>
+
+<body>
+  <input style=" display: none;" type="file" name="" id="inu" hidden>
+   <div class="player">
+      <cavity>
+             <filament>
+                <video poster="" src="/Moviesda.Mobi_-_Animal_2023_Original_720p_(950_MB).mp4" class="main"></video>
+             <fil>
+               <button id="prev">⏮</button>
+               <button id="pop"></button>
+               <button id="next">⏭</button>
+             </fil>
+             </filament>
+            <div class="button">
+              <div class="var">
+                <lod></lod>
+              </div>
+              <button>️￼</button>
+               <button>️⧌</button>
+                 <button>⁐</button>
+                 <button id="ej">⏏</button>
+              <button>️⏮</button>
+              <button>️⨙</button>
+              <button>⏭</button>
+            </div>
+      </cavity>
+             <cavity>
+               <div class="contrs">
+                 <label for="">Fileㅤ<button onclick="start()" style=" width:55px; height:20px;">Choose</button></label>
+                 <button class="bu" onclick="var emis = document.querySelector('video'); emis.requestPictureInPicture();">Pic in Pic</button>
+                 <label for="#fg">(B) Levels ㅤ<input type="range" name="" id="ft" list="ame" min="1" max="10" value="7"></label>
+                 <button class="bu" onclick="var xe3d = document.querySelector('video'); xe3d.webkitEnterFullscreen();">(F) Screen</button>
+                 <select type="text" id="fg">
+                   <option value="">Warm</option>
+                   <option value="">Neutral</option>
+                   <option value="">Cool</option>
+                   <option value="">Grey scale</option>
+                   <option value="">Nostalgia</option>
+                 </select>
+                 <datalist id="ame">
+                   <option value="#000000e1"></option>
+                   <option value="#000000d5"></option>
+                   <option value="#000000d1"></option>
+                   <option value="#000000c5"></option>
+                   <option value="#000000c1"></option>
+                   <option value="#000000b5"></option>
+                   <option value="#000000b1"></option>
+                   <option value="#000000a5"></option>
+                   <option value="#000000a1"></option>
+                   <option value="transparent"></option>
+                 </datalist>
+                 <select name="" id="">
+                   <option value="">120P</option>
+                   <option value="">244P</option>
+                   <option value="">320P</option>
+                   <option value="">480P</option>
+                   <option value="">720P</option>
+                   <option value="">1080P</option>
+                   <option value="">2048P</option>
+                   <option value="">4K</option>
+                   <option value="" selected>Auto</option>
+                 </select>
+                 <button class="bu">Set (F)</button>
+                 <button class="bu" id="nof" onclick="playrate(document.querySelector('#nof'))">(1) Speed</button>
+                 <vit onclick=" document.querySelector('.player').scrollTop = '0';">Return</vit><vit>Reset</vit>
+               </div>
+             </cavity>
+   </div>
+</body>
+
+</html> 
+ <style>
+   :root{
+   --im: url("/misty_forgot_her_pants__by_freddyacon_dghn9d8-375w-2x.jpg");
+   }
+   *{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      box-sizing:border-box;
+   }
+   html{
+           
+   }
+   body{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(grey,#090909);
+   }
+   .player{
+     width: 330px;
+     height: 254px;
+     background-color: #181818;
+     display: flex; 
+     justify-content: bottom; 
+     align-items: center; 
+     flex-direction: column;
+     border-radius: 8px;
+     overflow-y: scroll;
+     scroll-behavior: smooth;
+     border: 3px solid #303030;
+     padding-bottom:20px;
+     scroll-snap-type: y mandatory;
+   }
+      cavity {
+        width: 100%;
+        height: 100%;
+        background-color: #181818;
+        display: flex;
+        justify-content: bottom;
+        align-items: center;
+        padding-top: 9px;
+        flex-direction: column;
+        border-radius: 8px;
+        border-bottom: none;
+        margin-bottom: 100px;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+      cavity .contrs{
+        width: 290px;
+        height: 220px;
+        background-color: red;
+        display: grid; 
+        grid-gap:0px; 
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(5,1fr);
+        justify-content: center; 
+        align-items: center; 
+        padding-right:0 100px;
+        margin-left: -17px;
+      }
+      cavity .contrs .bu,input,select,label{
+        height: 47px;
+        width: 163px;
+        background-color: #000;
+        color: #e5e5e5;
+        border:1px solid #2a2a2a;
+        display: flex; 
+        justify-content: left;
+        align-items: center; 
+        padding-left: 10px;
+        font-size: 5px;
+      }
+      vit{
+        height: 44px;
+        width: 163px;
+        background-color: #000;
+        color: #e5e5e5;
+        border:1px solid #2a2a2a;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding-left: 10px;
+        font-size: 5px;
+      }
+      cavity .contrs select{
+        padding-left: 10px;
+      }
+      cavity .contrs #ft {
+        padding-left: 10px;
+        width: 60px;
+      }
+     cavity .c.contrs input:first-child{
+       display: flex; 
+       justify-content: center; 
+       align-items: center; 
+     }
+     
+   .player filament{
+     width: 95%;
+     height: auto;
+     object-fit: cover;
+     position: relative; 
+   }
+   filament{
+     width: 511px;
+     height: 305px;
+     min-height: 181px;
+     max-height: 181px;
+     background-color: #3C84F873;
+     z-index: 11;
+   }
+   filament video{
+     width: 100%;
+     height: 100%;
+     max-heigh: 181px;
+     object-fit: cover;
+   }
+   filament fil{
+     width: 100%;
+     height: 100%;
+     background-color: ;
+     z-index: 11;
+     position: absolute; 
+     left:0px;
+     display: grid; 
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: 1,1fr;
+     top:0px;
+   }
+   filament fil button{
+     font-size: 50px;
+     border: none;
+     background-color: transparent;
+     color:transparent;
+   }
+   filament fil button:active{
+     background-color: #FFFFFF2E;
+     color:white;
+   }
+   .button{
+     background-color: ;
+     width: 95%;
+     height: 4vh;
+     display: grid; 
+     grid-template-columns: repeat(7,1fr);
+     grid-template-rows: 1;
+     position: relative; 
+   }
+   .button button{
+     width: vw;
+     height: 51px;
+     border: none;
+     background-color: #090909;
+     color: grey;
+     font-size: 20px;
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+   }
+   .var{
+     width: 100%;
+     height: 2px;
+     background-color: #e5e5e5;
+     position: absolute; 
+   }
+   .var lod{
+     height: 100%;
+     width: 70%;
+     background-color: #9966ee;
+     position: absolute; 
+     transition: width 1s linear;
+   }
+   tim{
+     width: 80px;
+     height: 40px;
+     background-color: #000;
+     color: #fff;
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     position: absolute;
+     padding: 10px;
+     top:528px;
+     left:104px;
+     z-index: 199;
+     
+   }
+</style> 
+ <script>
+   var playerOutput = document.querySelector('video'); 
+   var buttons = document.querySelectorAll('button'); 
+   var loader = document.querySelector('lod'); 
+   var brightness = document.querySelector('#ft'); 
+   var filin = document.querySelector('#inu');
+   var screening = document.querySelector('filament fil'); 
+   var prev = document.querySelector('#prev'); 
+   var pop = document.querySelector('#pop'); 
+   var next = document.querySelector('#next'); 
+   var eject = document.querySelector('#ej'); 
+   var b_levels;
+   var functions = {
+     m : 'assets',
+   }
+   prev.addEventListener('dblclick',() => { dec(10,100); });
+   pop.addEventListener('click',() => { pauseOrply(playerOutput,pop) })
+   next.addEventListener('dblclick',() => { inc(10,100); });
+   eject.addEventListener('click',() => { removeSrc(playerOutput) })
+   var truth = 0;
+   buttons[5].addEventListener('click',() => { pauseOrply(playerOutput) })
+   buttons[4].addEventListener('click',() => { dec(10,1000); });
+   buttons[6].addEventListener('click',() => { inc(10,1000); });
+   /*SRC*/    wait(sessionStorage.getItem('Go => Through'));
+   function pauseOrply(element,adj){
+     truth += 1; if(truth == 1){
+       element.play();
+       adj.style.textDecoration = 'none';
+     }else if(truth == 2){
+       element.pause();
+       adj.style.textDecoration = 'line-through';
+       truth = 0;
+     }
+   }
+   function inc(time,dur){
+     var closest = 0;
+     closest += time;
+     setTimeout(function(){
+       playerOutput.currentTime += closest;
+       respond('ski'),(() => {
+         console.warn(time + ' sec Skipped'); 
+       })
+     },dur); 
+   }
+   function dec(time,dur) {
+     var closest = 0;
+     closest += time;
+     setTimeout(function() {
+       playerOutput.currentTime -= closest;
+       respond('rew'),(() => {
+         console.warn(time + ' sec Rewinded');
+       })
+     }, dur);
+   }
+   function respond(fe){
+     if(fe == 'rew'){
+       localStorage.setItem('isRewinded', 'true');
+       //console.table({ isRewinded: true });
+     }else if(fe == 'ski'){
+       localStorage.setItem('isSkipped','true'); 
+       //console.table({ isSkipped : true }); 
+     }
+     //console.warn('- Feedback'); 
+   }
+   setInterval(function(){
+     var s = playerOutput.currentTime;
+     var e = playerOutput.duration;
+     loader.style.width = `${s * 100 / e}%`;
+   },0); 
+   brightness.addEventListener('change',function(){
+     var choises = ['#000000e1','#000000d5','#000000d1','#000000c5','#000000c1','#000000b5','#000000b1','#000000a5','#000000a1','transparent'];
+     screening.style.backgroundColor = `${choises[brightness.value-1]}`;
+   })
+   function start(){
+     filin.click();
+   }
+     filin.addEventListener('change', function() {
+    const docUments = this.files[0];
+    if (docUments) {
+      const readingsM = new FileReader();
+      readingsM.onload = function() {
+        const retuRn = readingsM.result;
+        playerOutput.src = retuRn;
+        playerOutput.play();
+      }
+      readingsM.readAsDataURL(docUments);
+    }
+    if (this.value) {
+      //let valueX = this.value.match(rip);
+      console.log('Path returned by compiler');
+    }
+  })
+  function removeSrc(source){
+    source.src = '';
+    console.warn('Source Rejacted'); 
+  }
+  function wait(ifSrcComes){
+    if(ifSrcComes === 'T'){
+      playerOutput.src = sessionStorage.getItem('(giv) => src');
+      playerOutput.poster = sessionStorage.getItem('thuumb');
+    }
+  }
+  var cause = 1;
+  function playrate(fo){ cause += .25; 
+   	if(cause == 100){	cause = 1;	} if(cause == 6){confirm(`Don't abuse (F) Speed`)} if(cause === 10){confirm('Are you kidding me ?')} if(cause > 15.75){ cause = 1; return 0;}
+  	 playerOutput.playbackRate = cause;
+    fo.textContent = `(${cause}) Speed`;
+  }
+  var upDate = localStorage.getItem('update');
+var lastVal = '';
+var getIdleM = Number(localStorage.getItem('Idle'));
+//var deeg = document.querySelector('#mar');
+//deeg.style.color = 'lightgrey'
+var ma4 = 0;
+
+function getIdleTime() {
+  //formulas : 
+  var getUnitM = Math.floor(getIdleM / 60).toFixed(0); // min
+  var getUnitH = Math.floor(getIdleM / 3600).toFixed(0); // hour
+  //mainStream.placeholder = getUnitH+' '+'hours';
+  //deeg.textContent = Math.floor(getIdleM / 3600).toFixed(0) + ' ' + 'hours';
+  //f16.textContent = `Idle : ${getIdleM} `
+  if (upDate === 'true') {
+    ///=/deeg.textContent = Math.floor(getIdleM / 3600).toFixed(0) + ' ' + 'hours';
+    setTimeout(function() {
+      //f16.textContent = `Idle : ${getIdleM} `
+      if (getIdleM < 3600) {
+        //mainStream.placeholder = Math.floor(getIdleM / 60).toFixed(0) + ' ' + 'min';
+      } else if (getIdleM >= 3600 && getIdleM < 86400) {
+        //mainStream.placeholder = Math.floor(getIdleM / 3600).toFixed(0) + ' ' + 'hours';
+      } else if (getIdleM > 86400) {
+        //mainStream.placeholder = Math.floor(getIdleM / 86400).toFixed(0) + ' ' + 'days'
+      } else if (getIdleM > 86400 * 7) {
+        //mainStream.placeholder = Math.floor(getIdleM / 86400 * 7).toFixed(0) + ' ' + 'Weeks'
+      } else if (getIdleM > 2, 592, 000 && getIdleM > 86400 * 7) {
+        //mainStream.value = Math.floor(getIdleM / 86400 * 30).toFixed(0) + ' ' + 'Month'
+      } else if (getIdleM > 31, 276, 800 && getIdleM > 2, 592, 000) {
+        //mainStream.value = Math.floor(getIdleM / 86400 * 365).toFixed(0) + ' ' + 'Year'
+      } else if (getIdleM > 31, 276, 800 * 10 && getIdleM > 31, 276, 800) {
+        //mainStream.value = Math.floor(getIdleM / 86400 * 10).toFixed(0) + ' ' + 'Eternity'
+      }
+    }, 7100)
+    localStorage.setItem('Idle', getIdleM);
+    localStorage.setItem('Idle Hours', Math.floor(getIdleM / 3600).toFixed(0));
+    getIdleM++
+  }
+}
+setTimeout(function() {
+  setInterval(getIdleTime, 1000)
+}, 0);
+ console.warn(window.clientInformation.storage.getDirectory('/Internal')); 
+ </script> 
