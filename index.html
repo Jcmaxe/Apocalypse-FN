@@ -8402,17 +8402,37 @@ text-decoration: underline;
    .img .prot_c givc{
      color: #212121;
    }
-   /* Marking*/
+     /* Marking*/
    .img .progreImg{
      position: relative; 
      width: 0%;
+     max-width: 327.5px;
      height: 1.5px;
      bottom:0px;
      border-right: 2px solid white;
+     border-radius: 0 1px 1px 0;
      display: flex; 
      transition: width 1s linear;
-     background-color: orangered;
+     background-color: #42445a;
+     box-shadow:70px 0px 0px grey;
+    z-index: 6;
    }
+  .img .progreImg:before{
+    content:"▪︎▪︎▪︎";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    left:-1px;
+    top: 0px;
+    z-index: -1;
+    background-color: #2f3542;
+    color:  #42445a;
+    font-size:.003px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+  }
    .bef{
      position: absolute;
      width: 330px;
@@ -8422,6 +8442,8 @@ text-decoration: underline;
      background-color:#181818;
      z-index: 3;
      display: none; 
+     max-width:327.5px;
+     overflow: hidden;
    }
    .img euro{
      position: absolute; 
