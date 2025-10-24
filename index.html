@@ -1926,8 +1926,9 @@ animation: load 2s linear infinite;
 	  var esr = 5 //window.confirm('See whats new ?'); 
 	    if(esr > 6){ 
 	      document.querySelector('.hi').innerHTML = selenore.innerHTML; localStorage.setItem('nuance','ok')
-	    }else{ pauseforawhile = false; document.querySelector('.hi').innerHTML = selenore.innerHTML; alignmentMa(document.querySelectorAll('.hi .img').length)}
+	    }else{ /* pauseforawhile = false;*/ }
 	  }
+	  document.querySelector('.hi').innerHTML = selenore.innerHTML; alignmentMa(document.querySelectorAll('.hi .img').length)
 	   
   /*var dynamica = localStorage.getItem('Dynamica'); 
    sansago.innerHTML = revelance;
