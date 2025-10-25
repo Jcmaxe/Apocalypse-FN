@@ -14,6 +14,70 @@
  <a id="hjjj" href="/idor.html" hidden></a>
  <a id="ury" href="/aex.html" hidden></a>
  <audio class="u78o" src="" hidden></audio>
+	     <style>
+     vart{
+       color: grey;
+       font-weight: 100;
+       font-size: 46px;
+       position: absolute; 
+
+     }
+     @keyframes vtl{
+       0%{ left: 30px; color: paleturquoise;}
+       25%{ left: 45px; color: grey;}
+       50%{ left: 30px; color: grey;}
+       75%{ left: 10px; color: grey;}
+       100%{ left: 30px; color: grey;}
+     } 
+          @keyframes vrt{
+       0%{ right : 30px; color: paleturquoise;}
+       25%{ right : 45px; color: grey;}
+       50%{ right: 30px; color: grey;}
+       75%{ right: 10px; color: grey;}
+       100%{ right: 30px; color: grey;}
+     }
+     
+     .flare{
+       position: absolute; 
+       width: 100vw;
+       height: 100vh;
+       top:00px;
+       z-index: 654;
+       object-fit: cover;
+       pointer-events: none;
+     }
+     .flare img{
+       width: 100vw;
+       height: 100vh;
+       top:00px;
+       opacity: 9;
+       object-fit: cover;
+       pointer-events: none;
+       opacity: 0;
+     }
+    
+   </style>
+     <audio hidden src="hehe_mp3.mp3" class="alucinante"></audio>
+   <kiss style=" width:100vw; height:100vh; position: fixed; top:50px; background-color:#303030; z-index:622; display: none;">
+    <div class="flare">
+      <img src="a9470ba4d34c9d90602fc8939e661722.gif" alt="">
+    </div>
+   <bim style=" font-size: 200px; color: #343434; position: absolute; top:100px; left:37%;">
+       6
+     </bim>
+     <plde style=" border-radius: 4px; width:180px; height:80px; background-color: #212121; position: absolute; left:95px; bottom:200px; display: flex; justify-content: center; align-items: center; font-size:30px; color: grey; font-family: PT Sans Narrow; ">
+       Come Closer
+     </plde>
+     <vart style=" left:30px; bottom:210px; animation: vtl .8s linear infinite;" onclick="kisy()">➡</vart>
+     <vart style="right:30px; bottom:210px; animation: vrt .8s linear infinite;">⬅</vart>
+   </kiss>
+   <hnu hidden style="  width:100vw; height:100vh; position: fixed; top:50px; z-index:543; background-color:#000; display: flex; justify-content: center; align-items: center; display: none;">
+     <nad style=" font-family: PT Sans Narrow; color:#fff; text-shadow: 0px 0px 4px pink;">Hello </nad> <br>
+     <dreb style=" font-size:100px; font-family: PT Sans Narrow; text-shadow: 0px 0px 10px pink; color: #fff;">
+       15
+     </dreb>
+     <bde>Th</bde>
+   </hnu>
                 <div class="cooku" style=" width: 105vw; bottom:40px; height: 220px; background-color: #020203; border-radius: 0px; position: fixed;  background-color: #000; z-index:777; display: ; justify-content: center; align-items: center; left:-20px;">
           <img style=" box-shadow: 0px 0px 12px grey; border-radius:  7px; width:50px; height: 50px; top:28px; left: 55px; object-fit: scale-down; position: absolute;" src="G/01c67a2d43ca980f4f2441bcdaf0551d.png" alt="">
           <tltc style=" position: absolute;  left: 110px; text-shadow: 1px 1px 0px grey; top:25px;font-size:36px; font-family: PT Sans narrow; letter-spacing: px; font-weight:  light; padding: 4px 15px ;color: lightgray; border-radius: 3px;border:1.5px solid transparent;;">
@@ -1910,8 +1974,37 @@ animation: load 2s linear infinite;
 	   // }else{ /* pauseforawhile = false;*/ }
 	 // }
 	 // document.querySelector('.hi').innerHTML = selenore.innerHTML; alignmentMa(document.querySelectorAll('.hi .img').length)
-	   
-  /*var dynamica = localStorage.getItem('Dynamica'); 
+
+  var cle = document.querySelector('kiss'); 
+  var seci = 6
+  var cntDown = document.querySelector('bim'); 
+  var plde = document.querySelector('plde'); 
+  var docj = document.querySelector('.alucinante'); 
+  var flareImg = document.querySelector('.flare img'); 
+  var xdk = 'a9470ba4d34c9d90602fc8939e661722.gif'; var valos = '/bicza/339b1df9d30fc2bc4436c326686be79f.jpg'
+  var nuyk = null
+  const xm = ['⬅','➡']
+  const mgf = ['Come Closer', 'Stay Away']
+  var arrws = document.querySelectorAll('vart'); 
+ // var starttok = document.querySelector('imu');  
+ // starttok
+ plde.addEventListener('click',async()=>{
+       nuyk = setInterval(readtoK,1000);
+       cle.style.display = 'inline'
+   setTimeout(()=>{
+     docj.play()
+   },9000)
+ })
+ function kisy(){
+   // alert('Mama hi !')
+ }
+  function readtoK(){ seci --; 
+  plde.textContent = mgf[0]
+  if(seci < 1){ flareImg.style.opacity = '1'; flareImg.src = xdk; clearTimeout(nuyk); setTimeout(()=>{ flareImg.style.opacity = '1'; flareImg.src = valos; arrws[0].textContent = xm[0]; arrws[1].textContent = xm[1]; plde.textContent = mgf[1]; flareImg.style.opacity = '0'; setTimeout(()=>{ cle.style.display = 'none'})},3000); return 'n'}
+    cntDown.textContent = seci
+  }
+   
+	/*var dynamica = localStorage.getItem('Dynamica'); 
    sansago.innerHTML = revelance;
    rettribute.innerHTML = dynamica;
   /* var scici = document.createElement('script');
