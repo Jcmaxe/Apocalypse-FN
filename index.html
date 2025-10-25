@@ -1887,11 +1887,12 @@ animation: load 2s linear infinite;
 	  var inuk = document.querySelector('.cooku'); 	  
 	  var inum = document.querySelectorAll('.cooku button'); 
 	  var ace = localStorage.getItem('consent') 
-	  inum.forEach((d,z)=>{
+	  inum.forEach((d,z)=>{ inuk.style.display = 'none';
 	    d.addEventListener('click',(e)=>{ localStorage.setItem('consent','i')})
 	  })
 	  if(ace != 'i'){
-	    inuk.style.display = 'flex'
+	    setTimeout(()=>{ inuk.style.display = 'flex'; },2400)
+	    // Make it pop up
 	  }else{ inuk.style.display = 'none'}
 	  // localStorage.setItem('sev', document.querySelector('#yun').innerHTML);
 	  
