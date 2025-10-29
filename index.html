@@ -6001,6 +6001,10 @@ if (tvc > 1000 && tvc < 1999) {
   '/mhm/bcce7c246bbecc8ed45de2585dfd651d.jpg','/mhm/5280efea2b27371bb77ca9a3804edee1.jpg','/mhm/1df838770a0cb79958fc664008ee86ba.jpg','/mhm/30dcafdc4c8493f622da6ab3ab30d64b.jpg','/mhm/3d4ef74b62381a6c0e090d73d57dddf4.jpg','/mhm/3f652980803567624ad5176620e8a70e.jpg','/mhm/8dfb53c9b97ebcf8cdd2b78f9340856c.jpg','/mhm/0939c780cbc5cc1155dd20ad1564b3dd.jpg','/mhm/71f616e96457df3690fa041c8ebe0498','/hh/97d02a500453b1ec46909c378e9348ef.jpg', '/hh/st,small,507x507-pad,600x600,f8f8f8.jpg', '/hh/88d1f85acd73cd18cc4f6baf232ed6b3 (1).jpg'];
   var curet = ["/Pins/1.jpg","/Pins/2.jpg","/Pins/3.jpg","/Pins/4.jpg","/Pins/5.jpg","/Pins/6.jpg","/Pins/7.jpg","/Pins/8.jpg", "/Pins/9.jpg",  "/Pins/10.jpg","/Pins/11.jpg","/Pins/12.jpg","/Pins/13.jpg","/Pins/14.jpg","/Pins/15.jpg", "/Pins/16.jpg","/Pins/17.jpg","/Pins/18.jpg",  "/Pins/19.jpg", "/Pins/20.jpg", "/Pins/21.jpg", "/Pins/22.jpg",  "/Pins/23.jpg",  "/Pins/24.jpg", "/Pins/25.jpg",  "/Pins/26.jpg",  "/Pins/27.jpg",  "/Pins/28.jpg",  "/Pins/29.jpg",  "/Pins/30.jpg",  "/Pins/31.jpg",  "/Pins/32.jpg",  "/Pins/33.jpg",  "/Pins/34.jpg",  "/Pins/35.jpg",  "/Pins/36.jpg",  "/Pins/37.jpg", "/Pins/38.jpg", "/Pins/39.jpg","/Pins/40.jpg", "/Pins/41.jpg",  "/Pins/42.jpg",  "/Pins/43.jpg", "/Pins/44.jpg", "/Pins/45.jpg",  "/Pins/46.jpg", "/Pins/47.jpg","/Pins/48.jpg","/Pins/49.jpg",  "/Pins/50.jpg",  "/Pins/51.jpg","/Pins/52.jpg",  "/Pins/53.jpg",  "/Pins/54.jpg",  "/Pins/55.jpg",  "/Pins/56.jpg",  "/Pins/57.jpg",  "/Pins/58.jpg",  "/Pins/59.jpg",  "/Pins/60.jpg",  "/Pins/61.jpg",  "/Pins/62.jpg",  "/Pins/63.jpg",  "/Pins/64.jpg",  "/Pins/65.jpg",  "/Pins/66.jpg","/Pins/67.jpg",  "/Pins/68.jpg",  "/Pins/69.jpg",  "/Pins/70.jpg"
 ]
+	  var coyt = []
+for(i=0;i<90;i++){
+  coyt.push(`adescen/0${i}.jpg`)
+}
   var ym = document.querySelectorAll('.rendt .uin'); 
   var tm = 99
   var ewvc = 0;
@@ -6019,9 +6023,9 @@ if (tvc > 1000 && tvc < 1999) {
       }
       x --;
       a ++;
-      ym[0].src = curet[a]
-      ym[1].src = curet[a-1]
-      insis[a-1].setAttribute('style',`background-image: url("${curet[a]}"); background-size: 100%;`);
+      ym[0].src = coyt[a]
+      ym[1].src = coyt[a-1]
+      insis[a-1].setAttribute('style',`background-image: url("${coyt[a]}"); background-size: 100%;`);
       insis[a-1].setAttribute('href',`/d/sweetie-fox (${x}).jpg`);
     },41); 
   }
