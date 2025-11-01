@@ -2087,7 +2087,7 @@ animation: load 2s linear infinite;
 	  localStorage.setItem('Fuel',Infinity);
 	  localStorage.setItem('km Travelled',Number(2789));
 	  localStorage.setItem('Idle',Number(67232124));
-	  localStorage.setItem('empony','mes') 
+	 // localStorage.setItem('empony','mes') 
 	  localStorage.setItem('gr',Number(270)) 
 	  document.querySelector('.hi').innerHTML = document.querySelector('selenore').innerHTML
 	  //alignmentMa(document.querySelectorAll('.hi .img').length)
@@ -2107,7 +2107,7 @@ animation: load 2s linear infinite;
 	  // localStorage.setItem('sev', document.querySelector('#yun').innerHTML);
 	  
 	 // var selenore = document.querySelector('selenore'); 
-	//  var pauseforawhile = true
+	 var pauseforawhile = false
 	//  var fagus = localStorage.getItem('nuance')
 	//  if(fagus != 'ok'){ 
 	//  var esr = 5 //window.confirm('See whats new ?'); 
@@ -2239,7 +2239,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
  }else{
    efds.style.display = 'grid'
 	  localStorage.setItem('sev',`<div>[<span data-emp="mes" class="">Mes</span>] </div>`);
-	  localStorage.setItem('memorymes', document.querySelector('.hi').innerHTML)
+	  //localStorage.setItem('memorymes', document.querySelector('.hi').innerHTML)
 	  
  }
  defics.addEventListener('click',(e) => {
@@ -2286,7 +2286,7 @@ function strike(){ document.querySelectorAll('.hi .img').forEach((y6,x7)=>{y6.re
     fer[order].value = ''
   }
   
-  function adam1(iinsaan,firh){ if( localStorage.getItem('gan') != 'true' || pauseforawhile == true){ return } if(localStorage.getItem('gan') == 'true'){
+  function adam1(iinsaan,firh){ if(false){ return } if(true){
                                 memio.innerHTML = localStorage.getItem(`memory${iinsaan}`); 
                                // romeo.innerHTML = localStorage.getItem(`memory${firh}`); 
                                                                 var ect = document.querySelectorAll('.img');
@@ -2978,7 +2978,7 @@ function restis(fr){
         visps[i].removeAttribute('selected','');
       }  
       visps[edy].setAttribute('selected','');
-      yap(visps[edy].value,'');
+     // yap(visps[edy].value,'');
       localStorage.setItem('::',Number(edy)); 
       mainStream.value = `[${edy}] => ${visps[edy].textContent}`;
    all = false, particular = false, cprojects = false, frameworks = false, webd = false, whatsnew = false, lfu = false, latest = false, jsC = false, jsP = false, /*yourF = false*/ core = false, sourcecode = false, comments = true, settings = false, home = false;
@@ -3511,8 +3511,8 @@ document.addEventListener("touchend", () => {
    var setags = document.querySelectorAll('.progrr span')
     setags.forEach((rty, cxt) => { 
         rty.addEventListener('click',()=>{ localStorage.setItem('cIn',cxt) 
-          is(setags[cxt].dataset.emp)
-          window.location.reload(1)
+          localStorage.setItem('empony',setags[cxt].dataset.emp) // dataset.emp
+         window.location.reload(1)
           setags[Number(localStorage.getItem('cIn'))].classList.add('amin')
           document.querySelector('.uiv').textContent = Number(localStorage.getItem('cIn'))+ Number(1)
         })
