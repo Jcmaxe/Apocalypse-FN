@@ -370,7 +370,7 @@
         <a id="f1" href="img(software).html" onclick="alol()">⎚ IMAGE - sect</a>
         <a href="#forTarget" id="f2" >፨ Engine - WE␔</a>
         <a id="f6" href="cheatSheet.html" ><givc style=" color:#ff3d3d; color: grey; margin-right:8px; font-size:11px;">🆦</givc> Creopi+</a>
-        <a href="#forTarget" id="f3" onclick="crssh()"><givc style=" color:deepskyblue; color: grey; margin-right:8px; font-size:11px;">🆪 </givc> Cobs (Dist) </a>
+        <a href="jroot/merch.html" id="f3" onclick="crssh()"><givc style=" color:deepskyblue; color: grey; margin-right:8px; font-size:11px;">🆪 </givc> Merch (ᑓ) </a>
         <a href="#venb" id="f4" onclick="ads()"><givc style=" color:#eccc68; color: grey; margin-right:8px; font-size:11px;">🅎 </givc> Extensions (Fdt)</a>
         <a id="f5" href="#targ" onclick="webdesign()"><givc style=" color:palevioletred; color: grey; margin-right:8px; font-size:11px;">🆬</givc> Media (Ctrls) </a>
         <a id="f6" href="#renf"><givc style=" color:#9966cc; color: grey; margin-right:8px; font-size:11px;">🆞</givc> Frames (Adt) </a>
@@ -2674,6 +2674,7 @@ if(ilgh == true){
   var ieeb = document.querySelector('.header');
   var ieebs = ieeb.querySelectorAll('button');
   //{ display set format }
+	  var edg = false
   var remove = null;
   //soe = document.querySelector('.sourcecode');
   var idg = document.querySelector('#idg'); 
@@ -2699,7 +2700,9 @@ if(ilgh == true){
          rer.onload = function(){
             const relt = rer.result;
             idg.src = relt;
-            speads[4].dataset.concrete = relt;        
+            speads[4].dataset.concrete = relt; 
+	        speads[4].value = relt
+	        edg = true
          }
          rer.readAsDataURL(file);
       }
@@ -2801,7 +2804,8 @@ speads[4].addEventListener('keyup', speadit)
   		continue
   		}
   	speads[s].value = localStorage.getItem(`x(${s})x`) 
-  	speads[4].value = '/add.jpg'
+  	
+	 if(edg ==false){ speads[4].value = '/add.jpg'}
   }
   var exd = 9
   var rmw = document.querySelector('#remi') 
@@ -2862,7 +2866,7 @@ en1.forEach((well,tri)=>{
           <euro>Content (⓲)</euro>
           <img src="" width="330px" height="341px" alt="" style=" object-fit: cover;" hidden="">
           <video id="video" class="vdo" muted="" loop="" autoplay="" preload="true" controls="" src="${mmb.x4}" height="341px" width="330px" data-mirror="false"></video>
-          <img class="${mmb.x2} ${document.querySelector('#verd').value}" id="www3" src="${mmb.x5}" width="330px" height="341px" alt="" style=" object-fit: cover;" data-cde="${document.querySelector('#qhesj').value}"" data-name="${mmb.x9}" data-duration="${mmb.x7}" data-size="${mmb.x6}" data-resolution="${mmb.x8}" data-src="${mmb.x5}" data-info="" data-view="" data-lim="" data-director="Atlee Kumar">
+          <img class="${mmb.x2} ${document.querySelector('#verd').value}" id="www3" src="${edg == false ? mmb.x5 : speads[4].value}" width="330px" height="341px" alt="" style=" object-fit: cover;" data-cde="${document.querySelector('#qhesj').value}"" data-name="${mmb.x9}" data-duration="${mmb.x7}" data-size="${mmb.x6}" data-resolution="${mmb.x8}" data-src="${mmb.x5}" data-info="" data-view="" data-lim="" data-director="Atlee Kumar">
           <div class="proTearment prot">
             <p class="prot_d">${mmb.x1}</p>
            <div class="prot_p" id="prod"> 
@@ -2892,6 +2896,7 @@ en1.forEach((well,tri)=>{
         var codes = [cee[0].dataset.cde, cee[1].dataset.cde];
         //setCodesProperly();
         damn();
+	    edg = false
         
       ad = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 16, 17, 18, 19, 20, 21, 22, 23]
     for (s = 0; s < speads.length; s++) {
