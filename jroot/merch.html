@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Merch Items [:]</title>
+ <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Aubrey&family=Merienda:wght@300..900&family=Pavanam&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=PT+Sans+Narrow:wght@400;700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=VT323&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <a hidden id="red" href="/merchet.html"></a>
+ <header>
+  
+ </header>
+   <div class="containermain">
+    <products>
+
+    </products>
+    <products>
+
+    </products>
+    <products></products>
+    <products></products>
+    <products></products>
+    <products></products>
+    <products></products>
+    
+    
+   </div>
+</body>
+
+</html>
+
+ <style>
+       @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Amiri+Quran&family=Geologica:wght@100..900&family=Pavanam&display=swap');
+  
+    :root{
+    	--ff : #121212;
+    }
+  
+  	*{
+  		margin: 0;
+  		padding: 0;
+  		box-sizing: border-box;
+  	}
+  	body{
+  		width: 100vw;
+  		height: 100vh;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		background: #000;
+  		font-family: "PT Sans Narrow";
+  	}
+  	.containermain{
+  	 width: 360px;
+  	 height: 655px;
+  	 background: var(--ff);
+  	 background-color: #000;
+  	 position: absolute; 
+  	 top:7px;
+  	 padding-left: 5px;
+  	 padding-top: 10px;
+  	 display: grid; 
+  	 overflow-y: scroll;
+  	 grid-template-columns: repeat(2,150px);
+  	 grid-template-rows: repeat(7,180px);
+  	 column-gap: 30px;
+  	}
+  	.containermain products{
+  	  width: 170px;
+  	  height: 170px; /*140*/
+  	  background-color: #000;
+  	  position: relative; 
+  	  border-radius: 8px;
+  	  border:.5px solid rgba(69, 69, 69, .1);
+
+  	}
+  	.containermain products:hover{
+  	  box-shadow: 0px 0px 10px #3d3c42;
+  	}
+  	.containermain products .img{
+  	  position: absolute; 
+  	  background-color: #090909;
+  	  box-shadow: inset 0px 0px 10px #212121;
+  	  width: 94%;
+  	  height: 98px;
+  	  border-radius: 7px;
+      overflow: hidden;
+      margin-left: 5px;
+      margin-top: 5px;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+  	}
+  	.containermain products .prt{
+  	  width: 100%;
+  	  height: 40px;
+  	  background-color: ;
+  	  position: absolute; 
+  	  bottom: 2px;
+  	  border-radius: 0 0 8px 8px;
+
+  	}
+  	.prt rte{
+  	  color: #fff;
+  	  font-weight: 200;
+  	  border: 2px solid #212121;
+  	  box-shadow: inset 0px 0px 8px grey;
+  	  border-radius: 8px;
+  	  padding: 3px;
+  	  line-height: 45px;
+  	  margin-left: 4px;
+  	}
+  	.prt buy{
+  	  width: 30px;
+  	  height: 15px;
+  	}
+  	.prt buy img{
+  	  width: 25px;
+  	  height: 20px;
+  	  border-radius: 4px;
+  	  object-fit: scale-down;
+  	  transform: translate(10px,3px);
+    
+  	}
+  	shr, pin{
+  	  color: grey;
+  	  padding: 0px  5px;
+  	}
+  	pin:hover{  color: #fff;}
+  	shr:hover{  color: #fff;}
+
+  	.img img{
+  	  width: 90%;
+  	  height: 85%;
+  	  border-radius: 3px;
+  	  object-fit: contain;
+  	  border: 1px solid #181818;
+  	  box-shadow: 0px 0px 12px #42445A10;
+  	  transition: all .4s ease;
+  	}
+  	.img img:hover{
+  	  background-color: #f7f7f7;
+
+  	}
+  	d{
+  	  color: grey;
+  	  font-size: 9.5px;
+  	  height: 30px;
+  	  width: 96%;
+  	  overflow: scroll;
+  	  font-family: "Saira Condensed";
+  	  background-color: ;
+  	  line-height: 12px;
+  	  position: absolute; 
+  	  top:102px;
+  	  padding: 5.5px;
+  	}
+  </style> 
+  
+   <script>
+      var products = document.querySelectorAll('products'); 
+      var ss = sessionStorage
+      products.forEach((item,index)=>{
+       item.addEventListener('click',()=>{
+         ss.setItem('product',item.querySelector('.re').src)
+         ss.setItem('desc',item.querySelector('d').textContent)
+         ss.setItem('price',item.querySelector('j').textContent)
+         ss.setItem('mprice',Number(ss.getItem('price'))+50)
+         redirect()
+       })
+      });
+      function redirect(){
+         document.querySelector('#red').click()
+      }
+   
+   
+   
+   
+     // To make the work easy, we have to yse our brain
+     var prices = [50,75,120,70,'60k',30,55]
+     var titles = [
+     'The Glittershine Enterprises Premium Dark Grey Scarf is crafted from soft, breathable fabric for all-day comfort and effortless style. Its elegant solid design makes it a versatile accessory, perfect for any season or occasion.',
+     `Glittershine Enterprises Classic Black T-Shirt – Stylish, Everyday Ready
+Crafted from soft, breathable fabric, this premium black tee offers a perfect fit for casual wear, workouts, or daily comfort with a sleek modern look.`,
+     `Glittershine Enterprises Premium Whey Protein Powder – Muscle Growth & Recovery Formula
+Fuel your workouts with high-quality protein & boost strength, support muscle gain, and enhance post-training recovery.`,
+     `Glittershine Enterprises Elegant Black Shawl – Soft, Warm & Timelessly Stylish
+Wrap yourself in luxury with this beautifully woven black shawl, designed for comfort, warmth, and a touch of sophistication for any occasion.`,
+     `Glittershine Enterprises Premium iPhone Case – Sleek, Durable & Scratch-Resistant Protection
+Keep your iPhone safe in style with this lightweight, shock-absorbing case, premium finish, and overall protection against drops.`,
+     `Glittershine Enterprises Men’s Formal Black Shoes – Elegant, Durable & Comfort-Fit Design
+Step into sophistication with black formal shoes, crafted for all-day comfort, a polished look, and lasting performance for any professional occasion.`,
+     `Glittershine Enterprises White Sneakers – Stylish Comfort with Durable Rubber Grip Pads
+Stay trendy and comfortable all day with these sleek white sneakers, featuring soft cushioning anti-slip rubber for superior everyday wear.`]
+     let uses = document.querySelectorAll('products'); 
+     
+     for(gett = 0; gett < uses.length; gett ++){ //if(gett == 3){ continue}
+       uses[gett].innerHTML = `      <div class="img">
+        <img class="re" src="/merchof/${gett+1}.jpg" style=" border-radius: 6px;" alt="">
+      </div>
+      <d> ${titles[gett]}</d>
+      <div class="prt">
+        <rte><b class="pri"><j>${prices[gett]}</j>.00 </b></rte> <pin style=" color:#ffde3e;">︎🜲</pin> <shr>ᑓ</shr> <buy> <img src="/merchof/cart-128.png"></buy> 
+      </div>`
+     }
+     
+   </script>
