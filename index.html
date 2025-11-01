@@ -2803,6 +2803,7 @@ speads[4].addEventListener('keyup', speadit)
   	if(s > 11 && s < 15){ 
   		continue
   		}
+	  if(s == 1){continue}
   	speads[s].value = localStorage.getItem(`x(${s})x`) 
   	
 	 if(edg ==false){ speads[4].value = '/add.jpg'}
@@ -2868,7 +2869,7 @@ en1.forEach((well,tri)=>{
           <video id="video" class="vdo" muted="" loop="" autoplay="" preload="true" controls="" src="${mmb.x4}" height="341px" width="330px" data-mirror="false"></video>
           <img class="${mmb.x2} ${document.querySelector('#verd').value}" id="www3" src="${edg == false ? mmb.x5 : speads[4].value}" width="330px" height="341px" alt="" style=" object-fit: cover;" data-cde="${document.querySelector('#qhesj').value}"" data-name="${mmb.x9}" data-duration="${mmb.x7}" data-size="${mmb.x6}" data-resolution="${mmb.x8}" data-src="${mmb.x5}" data-info="" data-view="" data-lim="" data-director="Atlee Kumar">
           <div class="proTearment prot">
-            <p class="prot_d">${mmb.x1}</p>
+            <p class="prot_d">${mmb.x1 == "" || mmb.x1 == undefined ? `Apocalypte 2025 Adore Creations, Iddle Feed Web Illustrations and artwork done by  @one man studios. With the production of Apocalypte 2023 ©️ All Rights reserved` : mmb.x1 }</p>
            <div class="prot_p" id="prod"> 
               <img src="${mmb.x10}" alt=""> <p>${mmb.x11}</p><blocks class="verified" style="display:${document.querySelector('#vero').value};"><div></div></blocks> <blocks class="preverified" style=" display:${document.querySelector('#unvero').value};"><div></div></blocks><button>Follow</button> <button class="marbel">...</button> <button>★</button>
             </div>
