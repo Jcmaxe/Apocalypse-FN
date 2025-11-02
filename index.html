@@ -11080,9 +11080,9 @@ mystes div:nth-child(3) {
       <option value="Screenshot_20250914_002121_Chrome.png">Pink Fuyuku</option>
     </select>
     <select name="" id="dire" style=" margin-left:5px; font-family: PT Sans Narrow; color:grey;">
-      <option value="iuu" disabled>Direction</option>
-      <option value="iuu" selected>Anticlock</option>
-      <option value="iur">Clockwise</option>
+      <option value="-" disabled>Direction</option>
+      <option value="-" selected>Anticlock</option>
+      <option value="">Clockwise</option>
     </select>
     <select name="" id="spedd" style=" margin-left:5px; color:grey; font-family:PT Sans Narrow;">
       <option value="2500" disabled>Speed</option>
@@ -11334,7 +11334,8 @@ button.als{
       animation: adris 1s ease 1;
       animation-delay: .3s;
 }
-</style><!--Formula => beg + err(no - 2) -->
+</style>
+  <style class="t"></style><!--Formula => beg + err(no - 2) -->
 <script>
   var count = 5;
   var yuiu = document.querySelector('#yuiu'); 
@@ -11344,7 +11345,17 @@ button.als{
   var span = document.querySelector('#spi89'); 
    var ed = document.querySelector('#fgy17'); 
     function entrify(){
-		ed.style.animation = `${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`;
+		ed.style.animation = `${document.querySelector('#dire').value} ${Number(document.querySelector('#spedd').value)}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`;
+	     document.querySelector('.t').innerHTML = `
+		 @keyframes iuu{
+          0%{ transform: rotate(0deg); }
+         100%{ transform: rotate(${document.querySelector('#dire').value}360deg) }
+         } 
+		 
+		 button.ems{
+           animation: iuu ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+         }`
+		ed.classList.add('ems')
 	}   
 	
 	ed.classList.add('als');
