@@ -11079,18 +11079,18 @@ mystes div:nth-child(3) {
       <option value="Screenshot_20250914_002116_Chrome.png">Tenseigan</option>
       <option value="Screenshot_20250914_002121_Chrome.png">Pink Fuyuku</option>
     </select>
-    <select name="" id="" style=" margin-left:5px; font-family: PT Sans Narrow; color:grey;">
-      <option value="" disabled>Direction</option>
-      <option value="">Anticlock</option>
-      <option value="">Clockwise</option>
+    <select name="" id="dire" style=" margin-left:5px; font-family: PT Sans Narrow; color:grey;">
+      <option value="iuu" disabled>Direction</option>
+      <option value="iuu" selected>Anticlock</option>
+      <option value="iur">Clockwise</option>
     </select>
-    <select name="" id="" style=" margin-left:5px; color:grey; font-family:PT Sans Narrow;">
-      <option value="" disabled>Speed</option>
-      <option value="">Slow</option>
-      <option value="">Medium</option>
-      <option value="">Fast</option>
-      <option value="">Ultra</option>
-      <option value="">Gengutsu</option>
+    <select name="" id="spedd" style=" margin-left:5px; color:grey; font-family:PT Sans Narrow;">
+      <option value="2500" disabled>Speed</option>
+      <option value="3500">Slow</option>
+      <option value="2500" selected>Neutral</option>
+      <option value="1500">Fast</option>
+      <option value="1000">Ultra</option>
+      <option value="567">Gengutsu</option>
     </select></wakkdi>
    <span id="spi89" style=" display: flex; color:red"><marquee id="yuiu" behavior="scroll" scrollamount="315" direction="left"><h6 style=" line-height:65px; color:#2f3542;"><img style="margin-top:11px" src="" alt=""></h6></marquee></span>
   <button id="fgy17" style=" border-radius:50%; height:150px; width:150px; display: flex; justify-content: center; align-items: center;"><img  src="/zxs/how-kamui-works-0-h825kj82pehb1.png" style="border-radius: 50%; width:140px; height:140px; object-fit: cover;" def="/The Conjuring 2 (2016) HD (640x360).mp4" alt=""></button>
@@ -11228,8 +11228,7 @@ Chokin Hazzard 🗝️: Do not disrupt the pulse while (Code) Run..
 
    }
    button.ems{
-     animation: iuu 2500ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
-
+    
    }
    button:active{
      /*animation: iuu 1s linear infinite;*/
@@ -11312,6 +11311,11 @@ border-left: 3px dashed #212121;
    
    100%{ transform: rotate(-360deg)}
 } 
+   @keyframes iur{
+   0%{ transform: rotate(0deg); }
+   
+   100%{ transform: rotate(360deg)}
+} 
 
    @keyframes identifier{
    0%{ transform:  rotate(-360deg)}
@@ -11342,10 +11346,15 @@ button.als{
        ed.classList.add('als');
      setTimeout(() => {
        ed.classList.remove('als')
-       ed.classList.add('ems')
+       ed.setAttribute('style',` animation: ${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`)
      }, 1400)
-   
-   ed.addEventListener('click',()=>{ 
+   document.querySelector('#spedd').addEventListener('change',()=>{
+	    ed.setAttribute('style',` animation: ${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`)
+   });
+	document.querySelector('#dire').addEventListener('change',()=>{
+		 ed.setAttribute('style',` animation: ${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`)
+	})
+	 ed.addEventListener('click',()=>{ 
      document.querySelector('title').textContent = '[..]';
      q ++;
      if(q == 1){
