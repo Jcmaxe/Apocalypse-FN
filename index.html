@@ -11343,17 +11343,17 @@ button.als{
   var gre = 30
   var span = document.querySelector('#spi89'); 
    var ed = document.querySelector('#fgy17'); 
-       ed.classList.add('als');
+    function entrify(){
+		ed.style.animation = `${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`;
+	}   
+	
+	ed.classList.add('als');
      setTimeout(() => {
        ed.classList.remove('als')
-       ed.setAttribute('style',` animation: ${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`)
+	     entrify()
      }, 1400)
-   document.querySelector('#spedd').addEventListener('change',()=>{
-	    ed.setAttribute('style',` animation: ${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`)
-   });
-	document.querySelector('#dire').addEventListener('change',()=>{
-		 ed.setAttribute('style',` animation: ${document.querySelector('#dire').value} ${document.querySelector('#spedd').value}ms cubic-bezier(0.47, 0, 0.745, 0.715) infinite;`)
-	})
+   document.querySelector('#spedd').addEventListener('change',()=>{ entrify(); });
+	document.querySelector('#dire').addEventListener('change',()=>{ entrify(); })
 	 ed.addEventListener('click',()=>{ 
      document.querySelector('title').textContent = '[..]';
      q ++;
