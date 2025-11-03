@@ -3303,6 +3303,23 @@ document.addEventListener("touchend", () => {
   isDragging = false;
 });
 
+	  const rolls = document.querySelectorAll('.img');
+rolls.forEach((y,c)=>{
+  // rolls[c].style.opacity = '0'
+})
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 150); // stagger timing
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  rolls.forEach(r => observer.observe(r));
+
   var sr1 = document.querySelector('#sr1'); 
   var sr2 = document.querySelector('#sr2'); 
   var sr3 = document.querySelector('#sr3'); 
@@ -11046,6 +11063,15 @@ mystes div:nth-child(3) {
      font-size: 70px;
      padding-top: 10px;
    }
+ .img{
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.img.visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
    </re4>
   </data-table>
    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=PT+Sans+Narrow:wght@400;700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=VT323&display=swap" rel="stylesheet">
