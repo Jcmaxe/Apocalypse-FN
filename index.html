@@ -2863,7 +2863,7 @@ en1.forEach((well,tri)=>{
             <div class="progreImg"></div>
           </div>
         </div>`;*/
-        var smpl = `<div class="img parseImg" style="font-size: 12px; color: grey; display: inline;" data-class="ve3">
+        var smpl = `<div class="img parseImg visible" style="font-size: 12px; color: grey; display: inline;" data-class="ve3">
           <euro>Content (⓲)</euro>
           <img src="" width="330px" height="341px" alt="" style=" object-fit: cover;" hidden="">
           <video id="video" class="vdo" muted="" loop="" autoplay="" preload="true" controls="" src="${mmb.x4}" height="341px" width="330px" data-mirror="false"></video>
@@ -6124,6 +6124,41 @@ for(i=0;i<90;i++){
   outerlayer.addEventListener('click',function(){
     outerlayer.style.display = 'none';
   })  
+	  function ater(){
+	  const gallery = document.getElementById('gallery');
+const API_KEY = "52602670-3445097902a316903a34c1071"; // <-- Replace with your Pixabay API key
+const URL = `https://pixabay.com/api/?key=${API_KEY}&q=female+nude&image_type=photo&per_page=200`;
+let laxy = []
+async function fetchImages() {
+  var adpi = document.querySelectorAll('.p3').length
+  //for(y=adpi; y < 50; y++){intercast(document.querySelector('.hi'))}
+  try {
+    const response = await fetch(URL);
+    if (!response.ok) throw new Error("Network response was not ok");
+    
+    const data = await response.json();
+    //gallery.innerHTML = ""; // Clear existing images
+    
+    data.hits.forEach((imgData,z) => {
+    //  const mg = document.createElement('img');
+      //for(xi=0; xi< document.querySelectorAll('.p3').length;xi++){
+   //   }
+       laxy.push(imgData.webformatURL)
+      //mg.alt = imgData.tags;
+      //gallery.appendChild(img);
+    });
+    console.warn(laxy)
+    document.querySelectorAll('.p3').forEach((re,ce)=>{
+      re.src = laxy[ce]
+    })
+  } catch (err) {
+    console.error("Error fetching images:", err);
+    //gallery.innerHTML = "<p>Failed to load images. Check your API key.</p>";
+  }
+}
+
+fetchImages();
+	  }
 
 	  alignmentMa(document.querySelectorAll('.hi .img').length);
 </script>
