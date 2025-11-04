@@ -873,10 +873,10 @@ Series complete. We’re in the hall of fame. 😂🔥🖤<br>
   	   border-radius: 4px;
   	   box-shadow: 0px 0px 3px 1px lavender;
   	   transition: all .3s ease-out;
-      display: none; 
+      
   	}
    page img.re{
-     display: grid; 
+      
    }
   	page img:hover{
   	  height: 100%;
@@ -896,9 +896,12 @@ Series complete. We’re in the hall of fame. 😂🔥🖤<br>
   </style> 
 
   <script>
+      document.querySelectorAll('img').forEach((u,b)=>{
+        u.setAttribute('hidden','true')
+      })
     function desig(){
       document.querySelectorAll('page img').forEach((k,c)=>{
-        k.classList.add('re')
+        k.removeAttribute('hidden')
       })
     }
   </script>
