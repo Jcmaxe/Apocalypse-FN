@@ -6158,16 +6158,17 @@ async function fetchImages() {
   }
 }
 
-fetchImages();
+//fetchImages();
 	  }
 	  var debi = (-1)
      function addone(edg){
-       if(edg > 90){ return}
-       debi +=1
+       //if(edg > 90){ return}
+       drbi +=1
        for(u=debi;u<debi+1;u++){
          var dra = [`adescen/0${u+10}.jpg`,`pins/${u < 10 ? '0'+u : u}.jpg`]
          intercast(document.querySelector('.hi'),dra[0])
          alignmentMa(document.querySelectorAll('.hi .img').length )
+	  fil(dra[0]+','+debi / u )
        }
      }
 
@@ -6176,6 +6177,7 @@ fetchImages();
 		  for(e=0;e< document.querySelectorAll('.hi .img').length;e++){
 			  var draguli = [`adescen/0${e+10}.jpg`,`pins/${e < 10 ? '0'+e : e}.jpg`]
 			  document.querySelectorAll('.hi .img .p3')[e].src = draguli[id]
+	       
 		  }
 	  }
 	  var tyr = 0
