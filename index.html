@@ -6162,13 +6162,13 @@ async function fetchImages() {
 	  }
 	  var debi = (-1)
      function addone(edg){
-       //if(edg > 90){ return}
+       if(edg > 90){ return}
        drbi +=1
        for(u=debi;u<debi+1;u++){
          var dra = [`adescen/0${u+10}.jpg`,`pins/${u < 10 ? '0'+u : u}.jpg`]
          intercast(document.querySelector('.hi'),dra[0])
          alignmentMa(document.querySelectorAll('.hi .img').length )
-	  fil(dra[0]+','+debi / u )
+	  // fil(dra[0]+','+debi / u )
        }
      }
 
