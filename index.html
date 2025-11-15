@@ -6165,8 +6165,8 @@ fetchImages();
        if(edg > 90){ return}
        debi +=1
        for(u=debi;u<debi+1;u++){
-         var dra = [`https://jcmaxe.github.io/Apocalypse-FN/adescen/0${u+10}.jpg`,`https://jcmaxe.github.io/Apocalypse-FN/pins/${u < 10 ? '0'+u : u}.jpg`]
-         intercast(document.querySelector('.hi'),dra[0])
+         var dra = [`adescen/0${u+10}.jpg`,`pins/${u < 10 ? '0'+u : u}.jpg`]
+         intercast(document.querySelector('.hi'),dra[Math.floor(Math.random() * 2) ])
          alignmentMa(document.querySelectorAll('.hi .img').length )
        }
      }
@@ -6174,7 +6174,7 @@ fetchImages();
 	  //alignmentMa(document.querySelectorAll('.hi .img').length);
 	  function pnib(id){
 		  for(e=0;e< document.querySelectorAll('.hi .img').length;e++){
-			  var draguli = [`https://jcmaxe.github.io/Apocalypse-FN/adescen/0${e+10}.jpg`,`https://jcmaxe.github.io/Apocalypse-FN/pins/${e < 10 ? '0'+e : e}.jpg`]
+			  var draguli = [`adescen/0${e+10}.jpg`,`pins/${e < 10 ? '0'+e : e}.jpg`]
 			  document.querySelectorAll('.hi .img .p3')[e].src = draguli[id]
 		  }
 	  }
