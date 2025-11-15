@@ -6166,7 +6166,7 @@ fetchImages();
        debi +=1
        for(u=debi;u<debi+1;u++){
          var dra = [`adescen/0${u+10}.jpg`,`pins/${u < 10 ? '0'+u : u}.jpg`]
-         intercast(document.querySelector('.hi'),dra[Math.floor(Math.random() * 2) ])
+         intercast(document.querySelector('.hi'),dra[0])
          alignmentMa(document.querySelectorAll('.hi .img').length )
        }
      }
